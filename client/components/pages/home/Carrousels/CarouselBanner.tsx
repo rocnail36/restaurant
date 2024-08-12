@@ -22,7 +22,7 @@ const Images = [
  
 export function CarouselBanner() {
   return (
-    <Carousel opts={{loop:true}}  plugins={[Autoplay({delay:3000,stopOnInteraction:false})]} className="rounded-[20px] overflow-hidden gap-0 w-[100%] mb-12 hover:cursor-grab ">
+    <Carousel opts={{loop:true}}  plugins={[Autoplay({delay:3000,stopOnInteraction:false})]} className="rounded-[20px] overflow-hidden gap-0 w-[100%] mb-6 hover:cursor-grab ">
       <CarouselContent >
         {Images.map((image, index) => (
           <CarouselItem className="overflow-hidden p-0 gap-0 m-0 relative" key={index}>

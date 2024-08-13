@@ -5,7 +5,7 @@ const categories = ["todos","pizzas","hamburguesas","pollo","bebidas","entradas"
 
 const CategoryList = ({categories1}:{categories1?:string[]}) => {
   return (
-    <div className='self-start flex gap-2 w-[100%] py-4 overflow-x-scroll mb-6'>  
+    <div className='self-start flex gap-2 w-[100%] py-4 overflow-x-scroll mb-6 min-h-[60px]'>  
     {categories.map(category => (
           <CategoryBadge category={category}/>
     ))}   

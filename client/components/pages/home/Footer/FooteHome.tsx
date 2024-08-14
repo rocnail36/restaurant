@@ -13,7 +13,7 @@ const FooteHome = () => {
             <div className='flex items-center flex-wrap gap-8'>
         
              <div>
-             <Logo size='lg'/>
+             <Logo />
              <h3 className='text-white font-semibold text-xl mb-2'>Restaurante</h3>
               <FooterSocial/>
              </div>
@@ -21,7 +21,7 @@ const FooteHome = () => {
               <FooterContact/>
            
 
-           
+            
              </div>
            
     </div>

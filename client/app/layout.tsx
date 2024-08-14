@@ -11,16 +11,20 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children,lente
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode,
+  lente: React.ReactNode
 }>) {
+
+  console.log(lente)
   return (
     <html lang="en">
       <body className={cn(
           "font-lato",
           lato.variable
-        )}>{children}</body>
+        )}>{children}
+        </body>
     </html>
   );
 }

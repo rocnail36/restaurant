@@ -8,8 +8,8 @@ const layout = ({children,modal}:{children:React.ReactNode,modal:React.ReactNode
 
   return (
     <>
-
-      <div className='overflow-x-hidden'>
+      
+      <div className='overflow-x-hidden min-h-screen flex flex-col justify-between'>
       <NavbarHome/>
       {children}
       <FooteHome/>
@@ -17,6 +17,7 @@ const layout = ({children,modal}:{children:React.ReactNode,modal:React.ReactNode
 
 
       {modal}
+     
       </>
   )
 }

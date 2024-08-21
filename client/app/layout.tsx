@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { ViewTransitions } from 'next-view-transitions'
+
 const lato = Lato({ subsets: ["latin"], weight:["100","300","400","700","900"],variable: "--font-lato" });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
 
   console.log(lente)
   return (
-    <ViewTransitions>
+
     <html lang="en">
       <body className={cn(
           "font-lato",
@@ -27,6 +27,6 @@ export default function RootLayout({
         )}>{children}
         </body>
     </html>
-    </ViewTransitions>
+   
   );
 }

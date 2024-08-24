@@ -3,6 +3,7 @@ import { BannerCarousel } from '@/components/pages/home/Carrousels/BannerCarouse
 import { BestSellerCarousel } from '@/components/pages/home/Carrousels/BestSellerCarousel'
 import CarrouselCategory from '@/components/pages/home/Carrousels/CarrouselCategory'
 import CategoryList from '@/components/pages/home/categories/CategoryList'
+import FormWhatsApp from '@/components/pages/home/Forms.tsx/FormWhatsApp'
 
 import React from 'react'
 
@@ -13,6 +14,7 @@ const page = () => {
       <div className='max-w-6xl w-[100%]  px-2'>
       <BannerCarousel/> 
           <CategoryList />
+      
           <BestSellerCarousel/>
           <div className='w-[100%] flex flex-col gap-2'>
           <CarrouselCategory/>

@@ -1,17 +1,20 @@
+import { cn } from '@/lib/utils'
 import React from 'react'
+import { Button } from '../ui/button'
 
 type Props = {
   text:string,
   icon?: React.ReactNode,
-  className?: string
+  className?: string,
+  onClick?: () => void
 }
 
-const ButtonPrimary = ({text,icon,className = "bg-red-500"}:Props) => {
+const ButtonPrimary = ({text,icon,className,onClick}:Props) => {
   return (
-    <button className={` text-white rounded-lg px-4 py-2 ${className}`}>
+    <Button onClick={onClick} className={cn("text-white rounded-lg px-4 py-2 bg-red-500",className)}>
         {text}
         {icon}
-    </button>
+    </Button>
   )
 }
 

@@ -8,7 +8,7 @@ import Product, {
   ProductPrice,
   ProductTitle,
 } from "@/components/pages/home/Product/Product";
-import Modal from "@/components/pages/Modal";
+import Modal from "@/components/pages/home/modals/Modal";
 import { ArrowLeftCircle, Heart, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import React from "react";

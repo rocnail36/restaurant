@@ -18,7 +18,7 @@ const CategoryCarrousel = () => {
   return (
     <div className='w-[100%] flex flex-col'>
         <div className='flex justify-between items-center'>
-    <h2 className='text-lg'>Hamburguesas</h2>  <Link href={"#"}><Button className='text-red-400'>ver mas</Button></Link>
+    <h2 className='text-lg'>Hamburguesas</h2>  <Link href={"#"}><Button className='text-red-400 bg-white hover:bg-white'>ver mas</Button></Link>
         </div>
     <Carousel opts={{ align: "start" }} className="w-[100%]">
     <CarouselContent className="flex justify-start">

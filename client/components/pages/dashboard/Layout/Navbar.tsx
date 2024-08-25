@@ -16,10 +16,10 @@ const Navbar = () => {
    }
    console.log(path)
   return (
-    <div className={cn("bg-red-400 flex flex-col gap-4 py-2 h-[80px] overflow-hidden transition-all md:overflow-hidden md:w-[80px] md:hover:w-auto md:h-auto", clsx({
+    <div className={cn("bg-red-400 py-2 h-[75px] overflow-x-hidden lg:h-auto lg:w-[85px] lg:hover:w-[250px]", clsx({
      "h-auto": isOpen
     }))}>
-        <Logo className='ml-[10px]' onClick={switchNavBar}/>
+        <Logo className='ml-[10px] mb-2' onClick={switchNavBar}/>
         <ul className='flex flex-col gap-6 ml-2'>   
         {navbarLinks.map((link) => (
             <Link  href={link.src}>   

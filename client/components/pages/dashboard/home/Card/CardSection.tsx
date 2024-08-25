@@ -3,7 +3,7 @@ import React from 'react'
 
 const CardSection = () => {
   return (
-    <div className='bg-white shadow-md group transition-all hover:cursor-pointer hover:bg-red-500 px-2 rounded-2xl flex justify-center items-center  gap-4'>
+    <div className='bg-white shadow-md group transition-all hover:cursor-pointer hover:bg-red-500 px-2 rounded-2xl flex justify-center items-center aspect-square lg:aspect-video gap-4'>
 
         <div className='bg-red-500 p-2 group-hover:bg-white rounded-lg transition-all'>
         <Home size={30} className='text-white group-hover:text-red-400 transition-all'/> 

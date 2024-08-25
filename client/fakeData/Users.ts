@@ -1,4 +1,4 @@
-import { User } from "@/components/pages/dashboard/tables/users/lastRegisterColumn"; 
+import { User } from "@/components/pages/dashboard/Datatables/users/lastRegisterColumn"; 
 
 export const fakeUsers:User[] = [
     {

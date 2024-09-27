@@ -38,7 +38,7 @@ const DatePicker = ({className,setFilterDate}:{className?:string,setFilterDate:(
                 onClick={openDataPicker1}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
-                {date.from ? format(date.from, "PPP") : <span>Pick a date</span>}
+                {date.from ? format(date.from, "PPP") : <span>Desde</span>}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0" align="start">
@@ -70,7 +70,7 @@ const DatePicker = ({className,setFilterDate}:{className?:string,setFilterDate:(
                 onClick={openDataPicker2}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
-                {date.to ? format(date.to, "PPP") : <span>Pick a date</span>}
+                {date.to ? format(date.to, "PPP") : <span>Hasta</span>}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0" align="start">

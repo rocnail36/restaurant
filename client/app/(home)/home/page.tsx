@@ -3,7 +3,7 @@ import { BannerCarousel } from '@/components/pages/home/Carrousels/BannerCarouse
 import { BestSellerCarousel } from '@/components/pages/home/Carrousels/BestSellerCarousel'
 import CarrouselCategory from '@/components/pages/home/Carrousels/CarrouselCategory'
 import CategoryList from '@/components/pages/home/categories/CategoryList'
-import FormWhatsApp from '@/components/pages/home/Forms.tsx/FormWhatsApp'
+
 
 import React from 'react'
 

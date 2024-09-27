@@ -1,7 +1,7 @@
 "use client";
 import FilterTable from "@/components/pages/dashboard/Datatables/FilterTable/FilterTable";
 import Container from "@/components/pages/dashboard/Layout/Container";
-import React, { useState } from "react";
+import React from "react";
 import {
   getCoreRowModel,
   useReactTable,
@@ -10,7 +10,6 @@ import {
   getPaginationRowModel
 } from "@tanstack/react-table";
 import { fakeOrderData20 } from "@/fakeData/Orders";
-
 import {
   Select,
   SelectContent,
@@ -46,7 +45,6 @@ const page = () => {
 
   return (
     <Container>
-      <div className="w-[100%] h-[100%] pb-10 m-auto relative text-gray-800">
         <h1 className="text-2xl font-semibold mb-4 text-gray-700">Pedidos</h1>
         <div className="flex justify-center md:justify-start mb-6 gap-4 flex-wrap">
           <DatePicker setFilterDate={setFilterDate} />
@@ -83,8 +81,8 @@ const page = () => {
           </Select>
         </div>
         <FilterTable table={table} columns={allOrdersColumn} />
-        <Pagination table={table} className="absolute bottom-0 right-0"   />
-      </div>
+        <Pagination table={table} className="absolute bottom-1 right-0"   />
+     
     </Container>
   );
 };

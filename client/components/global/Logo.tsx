@@ -10,7 +10,7 @@ type Props = {
 
 const Logo = ({className,onClick}:Props) => {
 
-  return (<div onClick={onClick} className={cn(`min-h-[60px] w-[60px] relative bg-white rounded-[50%] aspect-square`,className)}>
+  return (<div onClick={onClick} className={cn(`min-h-[50px] w-[50px] relative bg-white rounded-[50%] aspect-square`,className)}>
   <Image src={"/logo.png"} fill style={{objectFit:"fill"}} alt='logo restaurant' />
   </div>
   )

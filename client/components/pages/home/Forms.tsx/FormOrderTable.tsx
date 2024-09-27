@@ -12,7 +12,8 @@ const formSchema = z.object({
     userName: z.string().min(2).max(50),
     note: z.string().max(50).optional(),
     tables: z.string(),
-    code: z.string().optional()
+    code: z.string().optional(),
+    products: z.object({hola:z.string()}).array()
   });
 
 
@@ -126,7 +127,7 @@ const FormOrderTable = () => {
               </FormItem>
             )}
           />
-          <Button className="w-full bg-red-600" type="submit">
+          <Button className="w-full" type="submit">
             Enviar
           </Button>
         </form>

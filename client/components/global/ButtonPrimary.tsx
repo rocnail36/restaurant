@@ -11,7 +11,7 @@ type Props = {
 
 const ButtonPrimary = ({text,icon,className,onClick}:Props) => {
   return (
-    <Button onClick={onClick} className={cn("text-white rounded-lg px-4 py-2 bg-red-500",className)}>
+    <Button onClick={onClick} className={cn("text-white rounded-lg px-4 py-2 bg-red-500 hover:bg-red-700",className)}>
         {text}
         {icon}
     </Button>

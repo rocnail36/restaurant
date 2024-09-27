@@ -9,6 +9,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { MoreHorizontal } from "lucide-react"
+import GlobalModal from "@/components/pages/home/modals/GlobalModal"
+import ProductForm from "../../../forms/FormProduct"
+import { useModal } from "@/components/pages/home/modals/hook/useModal"
 
 
 export type Product = {
@@ -30,10 +33,15 @@ export const allProductsColumn: ColumnDef<Product>[] =  [
    },
    {
     accessorKey: "title",
-    header:"Titulo"
+    header:"Nombre"
    },{
     accessorKey: "description",
-    header: "Descripción"
+    header: "Descripción",
+    cell: ({row}) => {
+      const value = row.getValue("description") as string
+
+      return  <div>{value.slice(0,15)}...</div>
+        }
    },
    {
     accessorKey: "price",
@@ -43,7 +51,18 @@ export const allProductsColumn: ColumnDef<Product>[] =  [
     header: "Categoria"
    },{
     accessorKey: "bestSelling",
-    header: "Mas vendido"
+    header: "Mas vendido",
+    cell: ({row}) => {
+      const isBestSelling = row.getValue("bestSelling") as Boolean
+      return <div>  {isBestSelling ? "si": "no"} </div>
+    },
+    filterFn: (row,columnId, filterValue) => {
+      
+      const isBestSelling = row.getValue(columnId)
+      const isBestSellingFilterValue = filterValue == "si" ? true : false 
+      return isBestSelling == isBestSellingFilterValue
+    }
+  
    },
    {
     accessorKey: "imageProduct",
@@ -52,9 +71,11 @@ export const allProductsColumn: ColumnDef<Product>[] =  [
    {
     id: "actions",
     cell: ({ row }) => {
-      const payment = row.original 
+      const product = row.original
+      const {closeModal,isOpen,openModal} = useModal()
  
       return (
+    <>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0">
@@ -63,17 +84,15 @@ export const allProductsColumn: ColumnDef<Product>[] =  [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(String(payment.id))}
-            >
-              Copy payment ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <DropdownMenuLabel>Opciones</DropdownMenuLabel>
+            <DropdownMenuItem onClick={openModal}>Ver producto</DropdownMenuItem>
+            <DropdownMenuItem>Eliminar Producto</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        <GlobalModal closeModal={closeModal} isControlled isOpen={isOpen}>
+          <ProductForm  product={product}/>
+        </GlobalModal>
+    </>
       )
     },
   },

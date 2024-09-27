@@ -2,7 +2,7 @@
 import ButtonPrimary from "@/components/global/ButtonPrimary";
 import Whatsapp from "@/components/global/Whatsapp";
 import React from "react";
-import ModalOrder from "../modals/ModalOrder";
+import ModalOrder from "../modals/GlobalModal";
 import { useModal } from "../modals/hook/useModal";
 import FormWhatsApp from "../Forms.tsx/FormOrderWhatsApp";
 import FormOrderTable from "../Forms.tsx/FormOrderTable";
